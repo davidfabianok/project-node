@@ -1,0 +1,67 @@
+.container-full {
+    width: 100%;
+    background: #ff7e5f;
+    background: -webkit-linear-gradient(to right, #feb47b, #ff7e5f);
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.hgv {
+    height: 100vh;
+}
+
+.hgp {
+    height: 100%;
+    padding-top: 130px;
+    min-height: 100vh;
+}
+
+.card-form {
+    max-width: 351px;
+}
+
+.card-add {
+    max-width: 351px;
+    width: 351px;
+}
+
+.card-news-container {
+    width: 700px;
+}
+
+.card-news {
+    width: 100%;
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+@media (max-width: 720px) {
+    .card-news-container {
+        width: 100%;
+    }
+}

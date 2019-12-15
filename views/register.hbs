@@ -1,0 +1,54 @@
+<div class="container-full hgv">
+    <div class="card bg-light card-form">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Registrarse</h4>
+            <form action="/register" method="POST">
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="name" value='{{name}}' {{#if e_name}} class="form-control is-invalid" {{else}}
+                        class="form-control " {{/if}} placeholder="Nombre completo" type="text">
+                    {{#each e_name}}
+                    <div class="invalid-feedback ">{{name}}</div>
+                    {{/each}}
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input name="email" value='{{email}}' {{#if e_email}} class="form-control is-invalid" {{else}}
+                        class="form-control " {{/if}} placeholder="Email" type="email">
+                    {{#each e_email}}
+                    <div class="invalid-feedback ">{{email}}</div>
+                    {{/each}}
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input name="password" {{#if e_pass}} class="form-control is-invalid" {{else}} class="form-control "
+                        {{/if}} placeholder="Contraseña" type="password">
+                    {{#each e_pass}}
+                    <div class="invalid-feedback ">{{password}}</div>
+                    {{/each}}
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input name="rpassword" {{#if e_rpass}} class="form-control is-invalid" {{else}}
+                        class="form-control " {{/if}} placeholder="Repetir Contraseña" type="password">
+                    {{#each e_rpass}}
+                    <div class="invalid-feedback ">{{rpassword}}</div>
+                    {{/each}}
+                </div> <!-- form-group// -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Crear cuenta </button>
+                </div> <!-- form-group// -->
+                <p class="text-center">Ya tienes una cuenta? <a href="/login">Iniciar sesion</a> </p>
+            </form>
+        </article>
+    </div> <!-- card.// -->
+
+</div>

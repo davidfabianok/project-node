@@ -1,0 +1,32 @@
+{{#if news}}
+<div class="container-full hgp">
+    <H1 class="h1 mb-4 text-center">Tablero de novedades</H1>
+    <div class="card-news-container">
+        {{#each news}}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">{{title}}</font>
+                    </font>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">{{autor}}</font>
+                    </font>
+                </h6>
+                <p class="card-text">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">{{description}}</font>
+                    </font>
+                </p>
+            </div>
+        </div> 
+        {{/each}}
+    </div>
+</div>
+    {{else}}
+    <div class="container-full hgv">
+        <h1 class="text-center display-4">No hay ninguna novedad.</h1>
+    </div>
+    {{/if}}

@@ -1,0 +1,27 @@
+<div class="container-full hgv">
+    <div class="card bg-light card-add">
+        <article class="card-body">
+            <h4 class="card-title mb-4 mt-1">Agregar Novedad</h4>
+            <form action="/news" method="Post">
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <input name="title" {{#if errors}} class="form-control is-invalid" {{else}} class="form-control"
+                            {{/if}} placeholder="Titutlo" type="text" autofocus value={{title}}>
+                        {{#each errors}}
+                        <div class="invalid-feedback ">{{text}}</div>
+                        {{/each}}
+                    </div> <!-- input-group.// -->
+                </div> <!-- form-group// -->
+                <div class="form-group">
+                    <textarea class="form-control" name="description" id="" rows="3"
+                        placeholder="Descripcion">{{description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Agregar </button>
+                </div> <!-- form-group// -->
+
+            </form>
+        </article>
+    </div> <!-- card.// -->
+</div>
